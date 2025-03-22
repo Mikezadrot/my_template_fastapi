@@ -13,7 +13,11 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from app.settings import settings
+
+# write models
 from app.models.user import User, UserGroupLink, Group
+# from app.models.token_session import TokenSession
+from app.models.book import Author, Genre, Book
 
 target_metadata = SQLModel.metadata
 config = context.config

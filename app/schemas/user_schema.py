@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 
 from uuid import uuid4
 
@@ -9,6 +9,17 @@ class UserCreate(BaseModel):
     password: str
     first_name: str
     last_name: str
+
+
+class UserUpdate(BaseModel):
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    username: Optional[str] = None
+    email: Optional[str] = None
+    model_config = {
+        "extra": "forbid"
+    }
+
 
 class UserResponse(BaseModel):
     id: int

@@ -10,3 +10,4 @@ sqlmodel==0.0.24
 psycopg2-binary==2.9.10
 python-dotenv==1.0.1
 pydantic_settings==2.8.1
+python-multipart==0.0.20

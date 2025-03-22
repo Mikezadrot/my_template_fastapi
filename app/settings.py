@@ -12,6 +12,8 @@ class Settings(BaseSettings):
     DATABASE_NAME: str
     DATABASE_PORT: int
     SECRET_KEY: str
+    ACCESS_EXPIRE_MINUTES: int = 15
+    REFRESH_EXPIRE_DAYS: int = 7
     DEBUG: bool = False
 
     DATABASE_URL: str = ""
